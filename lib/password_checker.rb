@@ -1,3 +1,5 @@
+# paired with Sarah Davies
+
 class PasswordChecker
     def check(password)
         if password.length >= 8
