@@ -12,7 +12,9 @@ RSpec.describe "doubles" do
   it "sets up a double with methods" do
     # Set up your doubles here
     fake_object = double(:fake)
+    #Kay used one liner: fake_object = double: cat, speak: "Meow", count_ears: 2, count_legs: 4
     expect(fake_object).to receive(:speak).with(no_args).and_return("Meow")
+    #Kay used: allow(fake_object).to receive(:speak).and_return("Meow")
     expect(fake_object).to receive(:count_ears).with(no_args).and_return(2)
     expect(fake_object).to receive(:count_legs).with(no_args).and_return(4)
 
